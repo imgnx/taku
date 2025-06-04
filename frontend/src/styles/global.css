@@ -1,0 +1,60 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "Milky Drops";
+  src: url("/Users/donaldmoore/Library/Fonts/MilkDropsBold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Zen Maru Gothic";
+  src: url("/Users/donaldmoore/Library/Fonts/ZenMaruGothic-Medium.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "JetBrains Mono";
+  src: url("/Users/donaldmoore/Library/Fonts/JetBrainsMonoNerdFontPropo-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Geist Mono";
+  src: url("/Users/donaldmoore/Library/Fonts/Geist-VariableFont_wght.ttf") format("truetype");
+}
+
+body.debug,
+body.debug * {
+  outline: 1px solid #88888888;
+}
+
+* {
+  font-family: "JetBrains Mono", monospace;
+  font-weight: 400;
+}
+
+h1 {
+  font-family: "Milky Drops", sans-serif;
+  font-weight: 500;
+}
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Zen Maru Gothic", sans-serif;
+  font-weight: 500;
+}
+
+button,
+a,
+p {
+  font-family: "Quicksand", sans-serif;
+  font-weight: 500;
+}
+
+code,
+pre {
+  font-family: "Geist Mono", monospace;
+  font-weight: 400;
+}

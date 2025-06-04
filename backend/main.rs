@@ -9,11 +9,11 @@ use wry::WebViewBuilder;
 fn main() -> Result<(), Box<dyn std::error::Error>> {
     let event_loop = EventLoop::new();
     let window = WindowBuilder::new()
-        .with_title("Hello from Wry")
+        .with_title("Hello from Taku")
         .build(&event_loop)?;
 
     let _webview = WebViewBuilder::new()
-        .with_url("https://example.com")
+        .with_url("http://localhost:8080")
         .build(&window)?;
 
     event_loop.run(move |event, _, control_flow| {

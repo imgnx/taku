@@ -1,6 +1,4 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 
 @font-face {
   font-family: "Milky Drops";
@@ -18,7 +16,12 @@
 }
 
 @font-face {
-  font-family: "Geist Mono";
+  font-family: "Geist";
+  src: url("/Users/donaldmoore/Library/Fonts/Geist-VariableFont_wght.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Geist";
   src: url("/Users/donaldmoore/Library/Fonts/Geist-VariableFont_wght.ttf") format("truetype");
 }
 
@@ -28,11 +31,17 @@ body.debug * {
 }
 
 * {
-  font-family: "JetBrains Mono", monospace;
+  font-family: "Geist", monospace;
   font-weight: 400;
 }
 
-h1 {
+#taku,
+#taku * {
+  font-weight: 500;
+  font-family: "Zen Maru Gothic", sans-serif;
+}
+
+#chalkbox {
   font-family: "Milky Drops", sans-serif;
   font-weight: 500;
 }
@@ -42,7 +51,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Zen Maru Gothic", sans-serif;
+  font-family: "Geist", sans-serif;
   font-weight: 500;
 }
 
@@ -55,6 +64,12 @@ p {
 
 code,
 pre {
-  font-family: "Geist Mono", monospace;
+  font-family: "JetBrains Mono", monospace;
   font-weight: 400;
+}
+
+
+
+#atf {
+  min-height: calc(100vh - 4rem)
 }

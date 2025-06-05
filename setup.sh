@@ -44,7 +44,7 @@ cp "$EXECUTABLE" "$APP_DIR/Contents/MacOS/${APP_NAME}"
 cp -R "$FRONTEND_DIST" "$APP_DIR/Contents/Resources/dist"
 
 # Create Info.plist
-cat > "$APP_DIR/Contents/Info.plist" <<EOF
+cat >"$APP_DIR/Contents/Info.plist" <<EOF
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
@@ -62,4 +62,8 @@ cat > "$APP_DIR/Contents/Info.plist" <<EOF
 EOF
 
 echo "✅ Bundle complete."
-echo "💡 Open it with: open \"$APP_DIR\""
+echo "💡 Opening..."
+open "$APP_DIR"
+echo "たく (Taku) is ready to use!"
+echo "🚀 Enjoy your app!"
+

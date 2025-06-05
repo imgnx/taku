@@ -16,6 +16,7 @@ const config = {
   devServer: {
     open: true,
     host: "localhost",
+    historyApiFallback: true, // 🔥 This tells dev server to serve index.html for all routes
   },
   plugins: [
     new HtmlWebpackPlugin({
@@ -41,11 +42,7 @@ const config = {
       },
       {
         test: /\.css$/i,
-        use: [
-          isProduction ? MiniCssExtractPlugin.loader : "style-loader",
-          "css-loader",
-          "postcss-loader"
-        ],
+        use: [isProduction ? MiniCssExtractPlugin.loader : "style-loader", "css-loader", "postcss-loader"],
       },
       {
         test: /\.(eot|svg|ttf|woff|woff2|png|jpg|gif)$/i,

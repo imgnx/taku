@@ -2,6 +2,7 @@
 name = "taku"
 version = "0.1.0"
 edition = "2021"
+build = "backend/build.rs"
 
 [dependencies]
 wry = "0.51"
@@ -11,4 +12,4 @@ tao = "0.33.0"
 
 [[bin]]
 name = "taku"
-path = "src/backend/main.rs"
+path = "backend/main.rs"

@@ -1,0 +1,106 @@
+.TH TAKU 1 "June 2025" "taku 1.0" "User Commands Manual"
+.SH NAME
+taku - multidimensional scaffolding CLI and WebView initializer
+.SH SYNOPSIS
+.B taku
+.RI \[ command ]
+.RI \[ options ]
+.SH DESCRIPTION
+.B taku
+is a declarative, opinionated, and extensible command-line interface (CLI) for initializing software projects that are not only Git repositories, but complete development environments wrapped in a Tao/Wry WebView, bundled with frontend and CLI interfaces. It is scaffolding on steroids.
+
+When invoked,
+.B taku
+performs layered setup operations:
+.IP (bu
+Configures Git repositories with intelligent defaults and hooks
+.IP (bu
+Generates a cross-platform Tauri/Wry/Tao hybrid app skeleton
+.IP (bu
+Bootstraps a full-stack project with React, TailwindCSS, and Webpack
+.IP (bu
+Supports interactive prompts to choose project structure and template
+.IP (bu
+Optionally creates a drop-in for an existing repo
+.SH COMMANDS
+.TP
+.B init
+Bootstraps the current directory into a taku-enabled environment. Assumes an existing Git repository.
+
+Creates default hook templates, WebView wrappers, and integrates CLI tooling.
+
+Example:
+.EX
+\$ taku init
+.EE
+.TP
+.B new \[template.json]
+Generates a new project using either interactive prompts or a predefined template JSON file.
+
+Scaffolds directories, sets up WebView entry points, and wires up initial Git repository. If no template is provided, defaults to a Tao/Wry Rust app with React and TailwindCSS. The user is prompted to provide a project name.
+
+Examples:
+.EX
+\$ taku new
+\$ taku new minimal.json
+.EE
+.SH OPTIONS
+.B taku
+commands accept the following general options:
+.TP
+.BR -y , --yes
+Skip interactive prompts and use default answers.
+.TP
+.BR -t , --template " \<template.json>"
+Specify a template JSON file without prompting.
+.TP
+.BR -d , --dir " <path>"
+Specify a target directory for project generation.
+.TP
+.BR -h , --help
+Display help for a specific command.
+.SH FILES
+.TP
+.B \~/.taku/config
+User configuration and template cache.
+.SH ENVIRONMENT
+.TP
+.B TAKU\_TEMPLATE\_PATH
+Custom path to search for templates.
+.SH EXIT STATUS
+.TP
+0
+Success
+.TP
+1
+Error during command execution
+.TP
+2
+Invalid usage or malformed options
+.SH EXAMPLES
+Generate a new full-stack project:
+.EX
+\$ taku new
+.EE
+
+Initialize an existing Git repo with hooks and a GUI shell:
+.EX
+\$ taku init
+.EE
+
+Non-interactive creation with the "minimal" template:
+.EX
+\$ taku new minimal.json -y
+.EE
+.SH SEE ALSO
+.BR git (1),
+.BR tao (1),
+.BR wry (1),
+.BR node (1),
+.BR react (1)
+.SH AUTHOR
+Written and maintained by the architects of over-engineering. Inspired by scaffolding entropy.
+.SH HISTORY
+Version 1.0 released June 2025.
+
+Initiated during an eclipse, at the convergence of CLI and GUI, by those who dare to scaffold across dimensions.

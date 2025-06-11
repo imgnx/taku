@@ -4,8 +4,14 @@
   "name": "taku",
   "scripts": {
     "dev": "webpack-dev-server --mode=development --open",
-    "build": "webpack --mode=production --node-env=production",
+    "build": "yarn run test && yarn run build:docs && webpack --mode=production --node-env=production",
     "build:dev": "webpack --mode=development",
+    "build:docs": "if command -v pandoc >/dev/null 2>&1; then pandoc -s -t man docs/taku.md -o docs/taku.1 && echo \"Documentation built successfully.\"; else echo >&2 \"pandoc required but not installed. Aborting.\"; exit 1; fi",
+    "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
+    "format": "prettier --write .",
+    "prettier": "prettier --check .",
+    "prettier:write": "prettier --write .",
+    "postinstall": "yarn run build",
     "watch": "webpack --watch",
     "serve": "webpack serve",
     "test": "echo \"Error: no test specified\" && exit 1"

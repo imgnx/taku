@@ -33,19 +33,32 @@ by GNOME Web (Epiphany), and you don't need to ship 100MB of Chromium to get a G
 
 ## 📁 Project Layout
 
-```txt
-my-app/
-├── src/                      # Rust source files
-│   ├── main.rs               # Entry point (GTK init)
-│   └── ui.rs                 # GTK window + WebView logic
-├── public/                   # HTML/CSS/JS frontend
-│   ├── index.html            # Entry HTML file
-│   ├── tailwind.config.js    # Tailwind setup
-│   ├── input.css             # Tailwind entry
-│   └── package.json          # For tailwind CLI only
-├── Cargo.toml                # Rust dependencies
-├── setup.sh                  # Bootstrap both sides
-```
+
+```shell
+my-taku/
+├── src/
+│   ├── backend/
+│   │   ├── src/
+│   │   │   ├── main.rs           # Entry point (GTK init)
+│   │   │   └── ui.rs             # GTK window + WebView logic
+│   │   └── dist/                 # Compiled Rust backend binaries
+│   ├── frontend/
+│   │   ├── src/
+│   │   │   ├── index.html        # Entry HTML file
+│   │   │   ├── input.css         # Tailwind entry
+│   │   │   ├── tailwind.config.js # Tailwind setup
+│   │   │   └── package.json      # For Tailwind CLI only
+│   │   └── dist/                 # Compiled frontend (HTML/CSS/JS)
+│   └── cli/
+│       ├── src/                  # CLI source files (e.g., .rs or .ts)
+│       └── dist/                 # CLI binaries or compiled outputs
+├── Cargo.toml                    # Root Rust dependencies
+├── main.sh                       # Bootstrap script
+├── package.json                  # Project-level Node dependencies
+├── yarn.lock                     # Yarn lockfile
+├── hooks/                        # Git or project hooks
+└── out/                          # Replaces Cargo's 'target' dir
+
 
 ---
 

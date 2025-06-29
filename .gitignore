@@ -1,3 +1,14 @@
+# Taku - A Rust-based GUI framework
+# ─────────────────────────────
+# Generically hidden files
+# ─────────────────────────────
+# Examples: _downloads, _tmp/
+**/_*
+# Examples: .env, .env.*, .cache/, .DS_Store, .vscode/, .idea/,
+**/.*
+# But not .git* — these files need to be tracked.
+!.git*
+
 # ─────────────────────────────
 # Rust / Cargo
 # ─────────────────────────────
@@ -8,17 +19,16 @@ Cargo.lock
 # ─────────────────────────────
 # Build scripts / logs
 # ─────────────────────────────
-/build/
-/dist/
-/out/
-/pkg/
-/*.log
+**/build/
+**/dist/
+**/out/
+**/pkg/
+**/*.log
 
 # ─────────────────────────────
 # GTK / WebKit / Misc
 # ─────────────────────────────
 /webkitgtk/
-.gtk-*
 *.swp
 
 # ─────────────────────────────
@@ -35,27 +45,26 @@ Cargo.lock
 # ─────────────────────────────
 # Editor / OS junk
 # ─────────────────────────────
-.DS_Store
 Thumbs.db
 *.sublime-workspace
 *.sublime-project
 *.code-workspace
-.vscode/
-.idea/
-*.iml
+# Additional common editor/IDE junk
+Desktop.ini
+ehthumbs.db
+Icon?
 
-# ─────────────────────────────
-# Environment / Secrets
-# ─────────────────────────────
-.env
-.env.*
-.secret
-*.key
-*.pem
+# Miscellaneous build and cache directories
+coverage/
+tmp/
 
-# ─────────────────────────────
-# Custom runtime or package cache
-# ─────────────────────────────
-/taku-runtime/
-.cache/
+# Node and package manager caches
 
+# Log files
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# SASS and ESLint caches
+# (covered by generic pattern)

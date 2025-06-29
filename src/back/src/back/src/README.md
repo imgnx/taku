@@ -67,8 +67,22 @@ Pseudocode
 
 ```markdown
 ### Steps to initialize a new project with `taku init`:
+```
 
-- Initialize `git`
+Initialize `git`
+
+```
+brew install git-lfs
+
+git lfs track "*.jpg"
+git lfs track "*.jpeg"
+git lfs track "*.png"
+git lfs track "*.tiff"
+git lfs track "*.ogg"
+git lfs track "*.zip"
+git lfs track "*.mid"
+git lfs track "*.pdf"
+```
 
 - Prompt user for name of project (defaults to name of directory — like `U.P.D.A.T.E.`)
 
@@ -154,11 +168,14 @@ Pseudocode
     \+ assertion: ggshield — no secrets
 
     - fallback: failure
+
 ```
 
 ```
+
 cargo build --release && mv target out
-```
+
+````
 
 ---
 
@@ -282,4 +299,4 @@ if (!result.command) {
 }
 
 console.log(JSON.stringify(result, null, 2));
-```
+````

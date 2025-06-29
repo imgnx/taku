@@ -1,1 +1,4 @@
 Combination GUI/CLI distribution
+Add `init` and `update`
+imgnxdaw as example
+Realtime and Networked (Social Media) Document Collaboration -- like Roam Research

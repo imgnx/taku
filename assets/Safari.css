@@ -1,0 +1,4 @@
+body *:not(.fa):not(i) {
+  font-family: "Hack Nerd Font Mono", "MesloLGS NF", "JetBrainsMono Nerd Font", monospace !important;
+  font-weight: 500;
+}

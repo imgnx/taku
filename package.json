@@ -1,7 +1,8 @@
 {
+  "name": "taku-frame",
   "version": "1.0.0",
   "description": "**A lightweight Electron alternative powered by GTK and Rust.**",
-  "name": "taku",
+  "main": "src/frontend/main.js",
   "scripts": {
     "dev": "webpack-dev-server --mode=development --open",
     "build": "yarn run test && yarn run build:docs && webpack --mode=production --node-env=production",
@@ -21,12 +22,16 @@
     "@babel/core": "^7.27.4",
     "@babel/preset-env": "^7.27.2",
     "@babel/preset-react": "^7.27.1",
+    "@eslint/js": "^9.30.1",
     "@radix-ui/colors": "^3.0.0",
     "@tailwindcss/postcss": "^4.1.8",
     "@types/react-router-dom": "^5.3.3",
     "autoprefixer": "^10.4.21",
     "babel-loader": "^10.0.0",
     "css-loader": "^7.1.2",
+    "eslint": "^9.30.1",
+    "eslint-plugin-react": "^7.37.5",
+    "globals": "^16.3.0",
     "html-webpack-plugin": "^5.6.3",
     "mini-css-extract-plugin": "^2.9.2",
     "postcss": "^8.5.4",
@@ -40,7 +45,6 @@
     "webpack-cli": "^6.0.1",
     "webpack-dev-server": "^5.2.2"
   },
-  "main": "index.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/imgnx/taku.git"

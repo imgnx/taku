@@ -1,4 +1,29 @@
-body *:not(.fa):not(i) {
-  font-family: "Hack Nerd Font Mono", "MesloLGS NF", "JetBrainsMono Nerd Font", monospace !important;
+/* Include MesloLGS NF from the current directory */
+
+@font-face {
+  font-family: "MesloLGS NF";
+  src: url("./MesloLGS\ NF\ Regular.ttf") format("truetype");
   font-weight: 500;
+  font-style: normal;
+}
+
+div:not(#glyphCheatSheet) * {
+  font-family: "MesloLGS NF", "Hack Nerd Font Mono", "JetBrainsMono Nerd Font", monospace !important;
+  font-display: swap !important;
+}
+
+#glyphCheatSheet {
+  font-family: unset;
+}
+
+/* Allow textarea and view a file at github.com to see why you shouldn't include .logged-in.env-production.page-responsive. */
+/* ! *::before { */
+body:not(.logged-in.env-production.page-responsive)::before * {
+  position: absolute;
+  font-family: "MesloLGS NF", "Hack Nerd Font Mono", "JetBrainsMono Nerd Font", monospace !important;
+  font-display: swap !important;
+  font-weight: 500;
+  font-style: normal;
+  color: var(#ffffff88);
+  content: ".";
 }
